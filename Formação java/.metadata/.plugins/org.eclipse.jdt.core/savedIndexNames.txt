@@ -1,0 +1,2 @@
+INDEX VERSION 1.131+C:\Users\Edu marioti\Documents\Projetos e Estudos\Alura\Formação java\.metadata\.plugins\org.eclipse.jdt.core
+1260124112.index

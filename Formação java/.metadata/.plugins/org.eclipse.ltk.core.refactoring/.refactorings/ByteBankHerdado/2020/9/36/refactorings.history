@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;Administradores&apos; to &apos;Administrador&apos;&#x0D;&#x0A;- Original project: &apos;ByteBankHerdado&apos;&#x0D;&#x0A;- Original element: &apos;Administradores&apos;&#x0D;&#x0A;- Renamed element: &apos;Administrador&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Administradores&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;{Administradores.java[Administradores" matchStrategy="1" name="Administrador" qualified="false" references="true" similarDeclarations="false" stamp="1599054843201" textual="false" version="1.0"/>
+</session>

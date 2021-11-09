@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="ControleBonificacao"/>
+<fullyQualifiedTypeName name="ContaCorrente"/>
+<fullyQualifiedTypeName name="ContaPoupanca"/>
+<fullyQualifiedTypeName name="Gerente"/>
+<fullyQualifiedTypeName name="SistemaInterno"/>
+<fullyQualifiedTypeName name="Funcionario"/>
+<fullyQualifiedTypeName name="FuncionarioAtenticavel"/>
+</qualifiedTypeNameHistroy>
