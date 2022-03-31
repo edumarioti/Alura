@@ -1,0 +1,13 @@
+Ativar ambiente virtual Django:
+    .\venv\Scripts\Activate.ps1 
+
+Iniciar Servidor
+    python manage.py runserver
+
+Postgree
+    pip install psycopg2
+    pip install psycopg2-binary
+
+
+Prepara o banco de dados
+    python manage.py makemigrations
