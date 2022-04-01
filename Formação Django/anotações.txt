@@ -1,13 +1,29 @@
 Ativar ambiente virtual Django:
-    .\venv\Scripts\Activate.ps1 
+      .\venv\Scripts\Activate.ps1 
 
 Iniciar Servidor
-    python manage.py runserver
+	python manage.py runserver
+
+Criar app
+python manage.py startapp pessoas
 
 Postgree
-    pip install psycopg2
-    pip install psycopg2-binary
+	pip install psycopg2
+	pip install psycopg2-binary
 
 
-Prepara o banco de dados
-    python manage.py makemigrations
+Quando alterado ou criado um model
+Prepara a migração para o banco de dados
+	python manage.py makemigrations
+
+Faz a migração
+	python manage.py migrate
+
+
+
+Criar usuário para admin
+	python manage.py createsuperuser
+
+
+
+**** Classe em model.py representam tabelas no DB
