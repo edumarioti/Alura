@@ -8,6 +8,6 @@ class ListandoPessoas(admin.ModelAdmin):
     list_display_links = ('nome', 'email')
     search_fields = ('nome',)
     list_per_page = 20
-
+    
 
 admin.site.register(Pessoa,ListandoPessoas)
