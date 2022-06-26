@@ -5,7 +5,7 @@ Iniciar Servidor
 	python manage.py runserver
 
 Criar app
-python manage.py startapp pessoas
+	python manage.py startapp pessoas
 
 Postgree
 	pip install psycopg2
@@ -13,11 +13,11 @@ Postgree
 
 
 Quando alterado ou criado um model
-Prepara a migração para o banco de dados
-	python manage.py makemigrations
+	Prepara a migração para o banco de dados
+		python manage.py makemigrations
 
-Faz a migração
-	python manage.py migrate
+	Faz a migração
+		python manage.py migrate
 
 
 

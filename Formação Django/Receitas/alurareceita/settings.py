@@ -11,7 +11,8 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-import os
+from django.contrib.messages import constants as messages
+import os, sys
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -32,7 +33,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'pessoas',
     'receitas',
     'usuarios',
     'django.contrib.admin',
@@ -112,7 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'pt-br'
 
-TIME_ZONE = 'America/Sao_Paulo'
+TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
@@ -135,3 +135,14 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Media
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+# Messages
+
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger',
+    messages.SUCCESS: 'success',
+    
+}
+
+PROJECT_ROOT = os.path.dirname(__file__)
+sys.path.insert(0, os.path.join(PROJECT_ROOT, '../apps'))

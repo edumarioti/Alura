@@ -11,7 +11,7 @@
     {% include 'partials/_busca.html' %}
     {% include 'partials/_menu.html' %}
 
-    <div class="contact-area section-padding-0-80">
+    <div class="contact-area section-padding-0-0">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -31,7 +31,6 @@
                 {% if receitas %}
                 {% for receita in receitas %}
                 
-
                 <!-- Single Best Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="single-best-receipe-area mb-30">
@@ -46,6 +45,14 @@
 
                             <a href="{% url 'receita' receita.id %}">
                                 <h5>{{ receita.nome_receita }}</h5>
+                                <a href="{% url 'edita_receita' receita.id %}" type="button" class="btn btn-success">Editar</a>
+                                {% if receita.publicada %}
+                                    <a href="{% url 'publica_receita' receita.id %}" type="button" class="btn btn-dark">Arquivar</a>
+                                {% else %}
+                                    <a href="{% url 'publica_receita' receita.id %}" type="button" class="btn btn-primary">Publicar</a>
+                                {% endif %}
+                                <a href="{% url 'deleta_receita' receita.id %}" type="button" class="btn btn-danger">Detelar</a>
+                                
                             </a>
                         </div>
                     </div>
