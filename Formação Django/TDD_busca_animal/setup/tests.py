@@ -1,6 +1,7 @@
 from django.test import LiveServerTestCase 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from animais.models import Animal
 
 class AnimaisTesteCase(LiveServerTestCase):
 
@@ -9,6 +10,13 @@ class AnimaisTesteCase(LiveServerTestCase):
         options = webdriver.ChromeOptions()
         options.add_experimental_option('excludeSwitches', ['enable-logging'])
         self.browser = webdriver.Chrome(executable_path='chromedriver.exe', options=options)
+        
+        self.animal = Animal.objects.create(
+            nome_animal = 'Leão',
+            predador = 'Sim',
+            venenoso = 'Não',
+            domestico = 'Não'
+        )
 
     def tearDown(self):
         """Finaliza o teste"""
@@ -30,12 +38,15 @@ class AnimaisTesteCase(LiveServerTestCase):
 
         # Ele vê um campo para pesquisar animais pelo nome. 
         burcar_animal_input = self.browser.find_element(By.CSS_SELECTOR, 'input#buscar-animal')
-        self.assertEqual(burcar_animal_input.get_attribute('placeholder'), 'Exemplo: leão') 
+        self.assertEqual(burcar_animal_input.get_attribute('placeholder'), 'Exemplo: leão, urso...') 
 
         # Ele pesquisa por Leão e clica no botão pesquisar.
         burcar_animal_input.send_keys('leão')
         self.browser.find_element(By.CSS_SELECTOR, 'form button').click()
 
         # O site exibe 4 caracteristicas do animal pesquisado.
+        caracteristicas = self.browser.find_elements(By.CSS_SELECTOR, '.result-description')
+        self.assertGreater(len(caracteristicas), 3)
+
 
         # Ele desiste de adotar um leão.
